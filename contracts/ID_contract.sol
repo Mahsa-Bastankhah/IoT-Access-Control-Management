@@ -1,3 +1,6 @@
+//@author Mahsa Bastankhah
+// this contract is responsible of saving user's attributes and ids
+
 pragma solidity >=0.4.22 <0.7.0;
 pragma experimental ABIEncoderV2;
 
@@ -101,6 +104,8 @@ contract ID_contract {
      * @param devicetype attributes of this domain's devices
      * @param deviceOwners owners of the  devices
      */
+     //admin can add domains. each domain corresponds to a set of devices or users that work closely. 
+         // each domain has a domain owner which can add or remove devices or users to the domain
     function addDomain(string memory domainName,
                        address owner,  
                        address[] memory devicesAddr ,
@@ -128,6 +133,7 @@ contract ID_contract {
      * @param devicetype attributes of added devices
      * @param deviceOwners owners of the  devices
      */
+     // domain owners can add a new device
     function addDevices(string memory domainName ,
                         address[] memory devicesAddr ,
                         string[] memory devicetype ,
@@ -149,6 +155,7 @@ contract ID_contract {
      * @param domainName name of the corresponding domain
      * @param deviceOwner address of the corresponding domain owner
      */
+     // the devices tackle this function to confirm the address of their owner.
     function confirmation(string memory domainName , address deviceOwner) onlyExistingDomains(domainName) public returns(bool) {
         
         Device memory device = devices[msg.sender];
@@ -177,6 +184,7 @@ contract ID_contract {
      * @param deviceAddr address of the delegated device
      * @param delegatee address of the delegatee
      */
+     // the owner of the device can delegate it to other users.
     function delegateDevice(address deviceAddr, address delegatee)
     public onlyConfirmedDevice(deviceAddr) onlyDeviceOwnerOrDelegatee(deviceAddr)
     onlyExistingDevice(deviceAddr){
@@ -191,7 +199,7 @@ contract ID_contract {
      * @param deviceAddr address of the modified device
      * @param deviceType new attributes
      */
-     
+     // device's attributes can be changed by the owner.
     function modifyDeviceAttr(address deviceAddr , string memory deviceType) 
     onlyDeviceOwnerOrDelegatee(deviceAddr) 
     onlyExistingDevice(deviceAddr) public{
