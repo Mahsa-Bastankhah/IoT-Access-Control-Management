@@ -1,3 +1,5 @@
+//@author Setareh Ghorshi
+
 pragma solidity >=0.4.22 <0.7.0;
 pragma experimental ABIEncoderV2;
 import "./Token_contract.sol";
