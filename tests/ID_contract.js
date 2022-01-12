@@ -1,5 +1,5 @@
 
-// @author Mahsa Bastankhah
+// author Mahsa Bastankhah
 
 const ID_contract = artifacts.require('ID_contract');
 
