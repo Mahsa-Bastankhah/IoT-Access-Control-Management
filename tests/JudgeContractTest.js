@@ -1,3 +1,4 @@
+// author Setareh Ghorshi
 const judge_contract = artifacts.require('judge_contract');
 const id_contract = artifacts.require('ID_contract');
 const token_contract = artifacts.require('token_contract');
