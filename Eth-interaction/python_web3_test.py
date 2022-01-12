@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Aug  8 21:08:32 2020
-
-@author: nicole
+@author: Setareh Ghorshi
 """
 
 import json
