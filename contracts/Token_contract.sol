@@ -1,9 +1,11 @@
+//@author Setareh Ghorshi
+
 pragma solidity >=0.4.22 <0.7.0;
 pragma experimental ABIEncoderV2;
 
 contract Token_contract {
 
-
+// instantiating the judge contract
 address public Judge_sc;
 	/*
 		Define struct to represent role based token data.
