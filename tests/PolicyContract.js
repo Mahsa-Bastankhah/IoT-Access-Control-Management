@@ -1,4 +1,4 @@
-
+//author Setareh Ghorshi
 const id_contract = artifacts.require('ID_contract');
 const policy_contract = artifacts.require('policy_contract');
 const { soliditySha3 } = require("web3-utils");
