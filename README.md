@@ -4,7 +4,7 @@ In this work, we implemented an attribute-based access control management system
 The elements of our designs are as follows:
 1) IoT devices: The devices let anyone with a valid token access them.
 2) Users: The user submit their access request to the blockchain. If the request was successful a new token in minted for the user that can be used later to access the device.
-3) Device owners: They enter the specification of the device in the smart ID-contract. The owner of the device decides about the policies that define who can access their device.
+3) Device owners: They enter the specification of the device in the ID-contract. The owner of the device decides about the policies that define who can access their device.
 ## Workflow
 Our systems is consists of 4 contracts:
 1) ID-contract
